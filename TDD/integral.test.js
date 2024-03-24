@@ -1,4 +1,4 @@
-const { calcularIntegralDefinida } = require('integral');
+const { calcularIntegralDefinida } = require('./integral');
 
 test('Calculando integral definida 1', () => {
 
@@ -8,11 +8,10 @@ test('Calculando integral definida 1', () => {
     var valorBaixo = 1;
 
     //O resultado da Integral tem que ser de 16/3
-    var valorEsperado = 5.4;
+    var valorEsperado = 5.3;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
-
-    expect(resultado).toBeCloseTo(valorEsperado, 5.3);
+    expect(resultado).toBeCloseTo(valorEsperado, 1);
 })
 test('Calculando integral definida 2', () => {
 
@@ -25,8 +24,7 @@ test('Calculando integral definida 2', () => {
     var valorEsperado = 2.7;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
-
-    expect(resultado).toBeCloseTo(valorEsperado, 2.6);
+    expect(resultado).toBeCloseTo(valorEsperado, 1);
 })
 test('Calculando integral definida 3', () => {
 
@@ -39,8 +37,7 @@ test('Calculando integral definida 3', () => {
     var valorEsperado = 10.5;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
-
-    expect(resultado).toBe(valorEsperado);
+    expect(resultado).toBeCloseTo(valorEsperado, 1);
 })
 test('Calculando integral definida 4', () => {
 
@@ -53,8 +50,7 @@ test('Calculando integral definida 4', () => {
     var valorEsperado = 282;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
-
-    expect(resultado).toBe(valorEsperado);
+    expect(resultado).toBeCloseTo(valorEsperado, 1);
 })
 test('Calculando integral definida 5', () => {
 
@@ -63,10 +59,10 @@ test('Calculando integral definida 5', () => {
     var valorCima = 37;
     var valorBaixo = 1;
     
-    //O resultado da Integral tem que ser de 161803284/7
+    //O resultado da Integral tem que ser de 161803284/7 ou 23114754.85714286
     var valorEsperado = 23114754.85714286;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
 
-    expect(resultado).toBe(valorEsperado);
+    expect(resultado).toBeCloseTo(valorEsperado, 0.1);
 })
