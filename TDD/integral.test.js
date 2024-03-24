@@ -2,13 +2,13 @@ const { calcularIntegralDefinida } = require('integral');
 
 test('Calculando integral definida 1', () => {
 
-    const funcao = x => Math.pow(x,2) + (2 * x);
+    var funcao = x => Math.pow(x,2) + (2 * x);
 
-    const valorCima = 2;
-    const valorBaixo = 1;
+    var valorCima = 2;
+    var valorBaixo = 1;
 
     //O resultado da Integral tem que ser de 16/3
-    const valorEsperado = 5.4;
+    var valorEsperado = 5.4;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
 
@@ -16,13 +16,13 @@ test('Calculando integral definida 1', () => {
 })
 test('Calculando integral definida 2', () => {
 
-    const funcao = x => Math.pow(x,2);
+    var funcao = x => Math.pow(x,2);
 
-    const valorCima = 2;
-    const valorBaixo = 0;
+    var valorCima = 2;
+    var valorBaixo = 0;
     
     //O resultado da Integral tem que ser de 8/3
-    const valorEsperado = 2.7;
+    var valorEsperado = 2.7;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
 
@@ -30,13 +30,13 @@ test('Calculando integral definida 2', () => {
 })
 test('Calculando integral definida 3', () => {
 
-    const funcao = x => Math.pow(x,2) - (5*x) + 9;
+    var funcao = x => Math.pow(x,2) - (5*x) + 9;
 
-    const valorCima = 4;
-    const valorBaixo = 1;
+    var valorCima = 4;
+    var valorBaixo = 1;
     
     //O resultado da Integral tem que ser de 21/2
-    const valorEsperado = 10.5;
+    var valorEsperado = 10.5;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
 
@@ -44,13 +44,13 @@ test('Calculando integral definida 3', () => {
 })
 test('Calculando integral definida 4', () => {
 
-    const funcao = x => (5*Math.pow(x,4)) + (2*x) + 10;
+    var funcao = x => (5*Math.pow(x,4)) + (2*x) + 10;
 
-    const valorCima = 3;
-    const valorBaixo = 0;
+    var valorCima = 3;
+    var valorBaixo = 0;
     
     //O resultado da Integral tem que ser de 282
-    const valorEsperado = 282;
+    var valorEsperado = 282;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
 
@@ -58,13 +58,13 @@ test('Calculando integral definida 4', () => {
 })
 test('Calculando integral definida 5', () => {
 
-    const funcao = x => (5*Math.pow(x,4))/3 + 20/7;
+    var funcao = x => (5*Math.pow(x,4))/3 + 20/7;
 
-    const valorCima = 37;
-    const valorBaixo = 1;
+    var valorCima = 37;
+    var valorBaixo = 1;
     
     //O resultado da Integral tem que ser de 161803284/7
-    const valorEsperado = 23114754.85714286;
+    var valorEsperado = 23114754.85714286;
 
     const resultado = calcularIntegralDefinida(funcao, valorCima, valorBaixo);
 
