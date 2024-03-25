@@ -32,8 +32,22 @@ function calcularIntegralDefinida_trapezio(funcao, a, b, n = 10000){
 
 
 }
-function calcularIntegralDefinida_simpson(funcao, a, b, n = 10000){
-    return
+function calcularIntegralDefinida_simpson(f, limSup, limInf, n = 10000){
+    resultado = 0
+    const h = (limSup-limInf)/n
+    for (let i = 0; i<=n; i++ ){
+        let x = limInf + h*i
+        if (x===limInf || x===limSup){
+            resultado += f(x)
+        } else if (i%2 ===0){
+            resultado += 2* f(x)
+        }else{
+            resultado += 4* f(x)
+        }
+    }
+    resultado *= h/3
+
+    return resultado
 }
 
 
