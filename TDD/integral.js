@@ -1,4 +1,4 @@
-function calcularIntegralDefinida(funcao, a, b, n = 10000){
+function calcularIntegralDefinida_trapezio(funcao, a, b, n = 10000){
 
 
     // Aqui é onde é calculado a integral definida, utilizando a regra do trapezio
@@ -32,5 +32,9 @@ function calcularIntegralDefinida(funcao, a, b, n = 10000){
 
 
 }
+function calcularIntegralDefinida_simpson(funcao, a, b, n = 10000){
+    return
+}
 
-module.exports = { calcularIntegralDefinida };
+
+module.exports = { calcularIntegralDefinida_trapezio, calcularIntegralDefinida_simpson };
